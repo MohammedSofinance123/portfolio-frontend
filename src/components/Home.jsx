@@ -5,7 +5,6 @@ import profileImage from "../assets/PROFILE.png";
 const cvFilePath = "/CV_Bensalem_Rustom.docx";
 
 const supinfoViolet = "#2b174d";
-const supinfoCoral = "#ff6e5b";
 
 const Home = () => (
   <section
@@ -17,7 +16,7 @@ const Home = () => (
       <div className="flex-shrink-0 rounded-2xl p-2 bg-white" style={{ border: `4px solid ${supinfoViolet}` }}>
         <img
           src={profileImage}
-          alt="Photo de Bensalem Rustom"
+          alt="Bensalem Rustom"
           className="rounded-xl object-cover w-[230px] h-[270px] shadow-md"
         />
       </div>
