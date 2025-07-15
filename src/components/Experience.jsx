@@ -10,7 +10,8 @@ const experienceData = [
     points: [
       "Découverte du fonctionnement d’une PME.",
       "Initiation à la gestion d’équipe et à la logistique."
-    ]
+    ],
+    doc: "/assets/docs/extrawood.pdf"
   },
   {
     title: "Stage observation",
@@ -19,7 +20,18 @@ const experienceData = [
     points: [
       "Découverte du métier d’avocat.",
       "Observation des procédures juridiques et rédactionnelles."
-    ]
+    ],
+    doc: "/assets/docs/avocat.pdf"
+  },
+  {
+    title: "Stage chez notaire",
+    company: "Office Public Notarial - Maître Irbouh",
+    date: "Été 2023",
+    points: [
+      "Découverte de la profession de notaire.",
+      "Observation des services extérieurs et fonctionnement de l'étude."
+    ],
+    doc: "/assets/docs/notaire.pdf"
   }
 ];
 
@@ -36,9 +48,13 @@ const Experience = () => (
       </div>
       <div className="grid md:grid-cols-2 gap-8">
         {experienceData.map((item, index) => (
-          <div
+          <a
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 border-t-4"
+            href={item.doc}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-2xl shadow-lg p-6 border-t-4 hover:shadow-xl transition-all"
             style={{ borderTopColor: supinfoViolet }}
           >
             <h3 className="text-xl font-bold mb-1" style={{ color: supinfoViolet }}>
@@ -50,7 +66,10 @@ const Experience = () => (
                 <li key={idx}>{point}</li>
               ))}
             </ul>
-          </div>
+            <p className="mt-4 text-sm font-semibold text-blue-600">
+              📄 Télécharger l'attestation
+            </p>
+          </a>
         ))}
       </div>
     </div>
