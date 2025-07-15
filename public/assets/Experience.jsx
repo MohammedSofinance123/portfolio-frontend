@@ -11,7 +11,7 @@ const experienceData = [
       "Découverte du fonctionnement d’une PME.",
       "Initiation à la gestion d’équipe et à la logistique."
     ],
-    doc: "/assets/extra.jpeg"
+    doc: "/assets/extrawood.pdf"
   },
   {
     title: "Stage observation",
@@ -21,7 +21,7 @@ const experienceData = [
       "Découverte du métier d’avocat.",
       "Observation des procédures juridiques et rédactionnelles."
     ],
-    doc: "/assets/avocat.jpeg"
+    doc: "/assets/avocat.pdf"
   },
   {
     title: "Stage chez notaire",
@@ -31,7 +31,7 @@ const experienceData = [
       "Découverte de la profession de notaire.",
       "Observation des services extérieurs et fonctionnement de l'étude."
     ],
-    doc: "/assets/notaire.jpg" // ✅ image déplacée dans public
+    doc: "/assets/notaire.pdf"
   }
 ];
 
@@ -60,13 +60,8 @@ const Experience = () => (
             <h3 className="text-xl font-bold mb-1" style={{ color: supinfoViolet }}>
               {item.title} – <span className="font-normal">{item.company}</span>
             </h3>
-            <p className="text-sm mb-4" style={{ color: supinfoViolet, opacity: 0.7 }}>
-              {item.date}
-            </p>
-            <ul
-              className="list-disc ml-5 space-y-1 text-base"
-              style={{ color: supinfoViolet, opacity: 0.8 }}
-            >
+            <p className="text-sm mb-4" style={{ color: supinfoViolet, opacity: 0.7 }}>{item.date}</p>
+            <ul className="list-disc ml-5 space-y-1 text-base" style={{ color: supinfoViolet, opacity: 0.8 }}>
               {item.points.map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
